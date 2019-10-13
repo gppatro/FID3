@@ -1,25 +1,77 @@
-<!DOCTYPE html>
 <html>
-<head>
-<title>Welcome to nginx!</title>
-<style>
-    body {
-        width: 35em;
-        margin: 0 auto;
-        font-family: Tahoma, Verdana, Arial, sans-serif;
+  <head>
+    <meta charset="UTF-8">
+    <style>
+    p {
+      margin-left: 20%;
+      margin-right: 20%;
+      text-align: left;
+      text-indent: 30px;
+      font-size: 25px;
     }
-</style>
-</head>
-<body>
-<h1>Welcome to nginx!</h1>
-<p>If you see this page, the nginx web server is successfully installed and
-working. Further configuration is required.</p>
-
-<p>For online documentation and support please refer to
-<a href="http://nginx.org/">nginx.org</a>.<br/>
-Commercial support is available at
-<a href="http://nginx.com/">nginx.com</a>.</p>
-
-<p><em>Thank you for using nginx.</em></p>
-</body>
+    header {
+        text-align: center;
+        font-size: 40px;
+        font-weight: bold;
+      }
+      .grid-container {
+        display: grid;
+        grid-template-columns: auto auto;
+        margin-left: 10%;
+        margin-right: 10%;
+      }
+      .grid-cnt2 {
+        display: grid;
+        grid-template-columns: auto auto;
+        margin-left: 27%;
+        margin-right: 10%;
+      }
+      .grid-item {
+        text-align: center;
+        margin-left: 20%;
+      }
+      input {
+        text-align: center;
+        margin-left: 45%;
+      }
+      table, th {
+        border: 3px solid black;
+      }
+      table {
+        width: 50%;
+        margin-left: 25%;
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <body>
+    <header align="center">Log de Máquinas TechLab</header>
+    <div>
+      <p>
+        Na tabela abaixo estão presentes os dados das máquinas cadastradas. Insira o IP da máquina abaixo para adicionar ao log de máquinas.
+      </p>
+    </div>
+    <div class="grid-container">
+      <div class="grid-item"><input style="width: 200px; height: 40px; font-size: 25px" id="IP_add" type="text" placeholder="000.000.000.000" maxlength="15"/></div>
+    </div>
+    <div style="margin-top: 15px;">
+    </div>
+    <div class="grid-cnt2">
+      <div class="grid-item"><button style="font-weight: bold; width: 90px; height: 40px; font-size: 25px" id="add">Inserir</button></div>
+    </div>
+    <div style="margin-top: 40px;">
+      <table id="machines">
+        <tr>
+          <th>ID</th>
+          <th>IP</th>
+          <th>Pos_X</th>
+          <th>Pos_Y</th>
+          <th>Pos_Z</th>
+          <th>Pos_A</th>
+          <th>Pos_B</th>
+        </tr>
+      </table>
+    </div>
+  </body>
+  <script src="http://54.232.206.101/index.js"></script>
 </html>
